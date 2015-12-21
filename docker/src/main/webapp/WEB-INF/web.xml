@@ -1,0 +1,42 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+
+	<servlet>
+		<servlet-name>cpuServlet</servlet-name>
+		<servlet-class>
+			com.docker.web.CPUServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>memoryServlet</servlet-name>
+		<servlet-class>
+			com.docker.web.MemoryServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>sampleServlet</servlet-name>
+		<servlet-class>
+			com.docker.web.SampleServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>memoryServlet</servlet-name>
+		<url-pattern>/memoryServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>cpuServlet</servlet-name>
+		<url-pattern>/cpuServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>sampleServlet</servlet-name>
+		<url-pattern>/sampleServlet</url-pattern>
+	</servlet-mapping>
+</web-app>
